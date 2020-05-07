@@ -9,6 +9,7 @@ import cupsImage from './assets/cups.jpg'
 import bikeImage from './assets/bike.jpg'
 import brassImage from './assets/brass.jpg'
 import groupImage from './assets/bca_group.jpg'
+import hopeImage from './assets/hw_image.png'
 
 class App extends React.Component {
     constructor () {
@@ -19,9 +20,15 @@ class App extends React.Component {
     }
 
     render() {
+        let dihedralLink = "https://nelsong1997.github.io/dihedral_calculator/"
+        let zombieLink = "https://nelsong1997.github.io/zombie_game/"
+        let colorLink = "https://nelsong1997.github.io/color_chooser/"
+        let hopeLink = "https://nelsong1997.github.io/hope-works-2/"
+
         return (
             <div id="main">
                 <div id="page-0" className="page">
+                    <h3>(I'm still working on this, but feel free to check it out (desktop recommended)</h3>
                     <h1>Hi, I'm Gabe.</h1>
                     <img src={me} alt="me" style={{height: "200px", width: "200px", borderRadius: "50%", border: "1px solid rgb(247, 133, 250)"}}></img>
                     <div id="break-bar-0" className="break-bar">
@@ -63,7 +70,7 @@ class App extends React.Component {
                     <label>Click on an image to open the project!</label>
                     <div id="project-boxes">
                         <div className="project-box">
-                            <h2><a href="http://zombie-disease-game.herokuapp.com/">Zombie Game</a></h2>
+                            <h2><a href={zombieLink}>Zombie Game</a></h2>
                             <p>
                                 The Zombie Game simplifies different aspects of diseases and how they spread.
                                 Professor <a
@@ -74,22 +81,22 @@ class App extends React.Component {
                                 also automatically records data in both a graph and a table.
                             </p>
                             <div className="image-box">
-                                <a href="http://zombie-disease-game.herokuapp.com/"><img src={zombieImage}></img></a>
+                                <a href={zombieLink}><img src={zombieImage} alt="zombie game"></img></a>
                             </div>
                         </div>
                         <div className="project-box">
-                            <h2><a href="http://colorchooser.herokuapp.com/">Color Chooser</a></h2>
+                            <h2><a href={colorLink}>Color Chooser</a></h2>
                             <p>
                                 The Color Chooser is essentially a highly customizable die. It allows the user to have the app randomly 
                                 select a color from a user selected list, with different constraints and options, including weighting and 
                                 pseudo-randomness. Unlike other apps I've created, this app designed with aesthetics and mobile access in mind.
                             </p>
                             <div className="image-box">
-                                <a href="http://colorchooser.herokuapp.com/"><img src={colorChooserImage}></img></a>
+                                <a href={colorLink}><img src={colorChooserImage} alt="color chooser"></img></a>
                             </div>
                         </div>
                         <div className="project-box">
-                            <h2><a href="https://dihedral-calculator.herokuapp.com/">Dihedral Calculator</a></h2>
+                            <h2><a href={dihedralLink}>Dihedral Calculator</a></h2>
                             <p>
                                 <a href="https://en.wikipedia.org/wiki/Dihedral_group">Dihedral groups</a> are part of <a
                                 href="https://en.wikipedia.org/wiki/Group_theory">group theory</a>,
@@ -100,11 +107,11 @@ class App extends React.Component {
                                 href="https://www.bates.edu/faculty-expertise/profile/peter-n-wong/">Peter Wong</a>.
                             </p>
                             <div className="image-box">
-                                <a href="http://dihedral-calculator.herokuapp.com/"><img src={dihedralImage}></img></a>
+                                <a href={dihedralLink}><img src={dihedralImage} alt="dihedral calculator"></img></a>
                             </div>
                         </div>
                         <div className="project-box">
-                            <h2>Hope Works Form Viewer</h2>
+                            <h2><a href={hopeLink}>HOPE Works Capstone</a></h2>
                             <p>
                                 At the end of my time at <a href="https://www.burlingtoncodeacademy.com/">Burlington Code Academy</a>, 
                                 my group's capstone project was to build a web app for <a href="https://hopeworksvt.org/">Hope Works</a>, a non-profit
@@ -113,7 +120,7 @@ class App extends React.Component {
                                 to document interactions with survivors, and this sub-project: the page that sorts and displays submitted forms.
                             </p>
                             <div className="image-box">
-                                <a href="google.com"><img src={dihedralImage}></img></a>
+                                <a href={hopeLink}><img src={hopeImage} alt="HOPE Works form viewer"></img></a>
                             </div>
                         </div>
                     </div>
@@ -129,7 +136,8 @@ class App extends React.Component {
                                 They are used to make some task simpler, faster, or less
                                 frustrating. No matter what I end up doing, I want to be helping people in some way. While I would ideally love to work
                                 on projects that help people in difficult life situations or that help make our society more equitable, I would settle 
-                                for making people's day to day lives easier by making the apps they use every day more effective and easier to use.
+                                for making people's day to day lives easier by making the apps they use every day more effective and easier to use. That
+                                being said, I definitely don't want to work for any company that is exploitative, deceptive, or predatory in any way.
                             </p>
                         </div>
                         <div className="goal-box">
@@ -179,11 +187,14 @@ class App extends React.Component {
                                 similar.
                             </p>
                         </div>
+                        <div className="goal-box">
+                            <div className="image-box">
+                                <img src={groupImage} alt="BCA capstone group"></img>
+                            </div>
+                            <label>Our Burlington Code Academy HOPE Works capstone group</label>
+                        </div>
                     </div>
-                    <div className="image-box">
-                        <a href="google.com"><img src={groupImage}></img></a>
-                    </div>
-                    <label>Our Burlington Code Academy HOPE Works capstone group</label>
+                    
                 </div>
                 <div id="page-3" className="page">
                     <h1>More About Me</h1>
@@ -212,8 +223,8 @@ class App extends React.Component {
                                 href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, where I've done most of my pottery.
                             </p>
                             <div className="image-box">
-                                <a href="google.com"><img src={bowlImage}></img></a>
-                                <a href="google.com"><img src={cupsImage}></img></a>
+                                <a href="google.com"><img src={bowlImage} alt="a bowl"></img></a>
+                                <a href="google.com"><img src={cupsImage} alt="some cups"></img></a>
                             </div>
                         </div>
                         <div className="about-box">
@@ -233,7 +244,7 @@ class App extends React.Component {
                                 community and get some exercise.
                             </p>
                             <div className="image-box">
-                                <a href="google.com"><img src={bikeImage}></img></a>
+                                <a href="google.com"><img src={bikeImage} alt="my bike"></img></a>
                             </div>
                         </div>
                         <div className="about-box">
@@ -246,7 +257,7 @@ class App extends React.Component {
                                 any opportunities to continue playing in an ensemble now that I've graduated.
                             </p>
                             <div className="image-box">
-                                <a href="google.com"><img src={brassImage}></img></a>
+                                <a href="google.com"><img src={brassImage} alt="Bates Brass Ensemble"></img></a>
                             </div>
                         </div>
                     </div>

@@ -28,12 +28,8 @@ html, body, #root{
 }
 
 .page {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-}
-
-h1 {
-    margin-top: 0px;
 }
 
 p, h1, h2, h3, h4, label {
@@ -62,7 +58,7 @@ a {
     text-shadow: 1px 1px rgb(49, 19, 53);
 }
 
-.image-box > a > img {
+.image-box > a > img, .image-box > img {
     height: 198px;
     border: 1px solid rgb(247, 133, 250);
     margin-left: 5px;
