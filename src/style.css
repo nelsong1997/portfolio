@@ -11,7 +11,7 @@ html, body, #root{
     justify-content: center;
 }
 
-#page-0 {
+/* #page-0 {
     background-image: linear-gradient(to bottom, rgb(94, 36, 102), rgb(247, 133, 250));
 }
 
@@ -25,7 +25,7 @@ html, body, #root{
 
 #page-3 {
     background-image: linear-gradient(to bottom, rgb(247, 133, 250), rgb(94, 36, 102));
-}
+} */
 
 .page {
     min-height: 100vh;
@@ -34,13 +34,13 @@ html, body, #root{
 
 p, h1, h2, h3, h4, label {
     font-family: "Tahoma", "Arial", "sans-serif";
-    color: rgb(49, 19, 53);
+    /* color: rgb(49, 19, 53); */
     text-align: justify;
 }
 
-h1, h2, h3, h4 {
+/* h1, h2, h3, h4 {
     text-shadow: 1px 1px rgb(247, 133, 250);
-}
+} */
 
 .break-bar {
     display: flex;
@@ -54,14 +54,14 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: rgb(218, 39, 215);
+    /* color: rgb(218, 39, 215); */
     text-decoration: none;
-    text-shadow: 1px 1px rgb(49, 19, 53);
+    /* text-shadow: 1px 1px rgb(49, 19, 53); */
 }
 
 .image-box > a > img, .image-box > img {
     max-height: 198px;
-    border: 1px solid rgb(247, 133, 250);
+    /* border: 1px solid rgb(247, 133, 250); */
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -93,7 +93,7 @@ a {
     height: 300px;
     width: 300px;
     border-radius: 50%;
-    border: 1px solid rgb(247, 133, 250);
+    /* border: 1px solid rgb(247, 133, 250); */
 }
 
 @media screen and (max-width: 1040px) {
@@ -109,7 +109,6 @@ a {
 
     .image-box > a > img, .image-box > img {
         max-width: 80vw;
-        border: 1px solid rgb(247, 133, 250);
         margin: 0px;
     }
 
@@ -139,7 +138,6 @@ a {
         max-width: 90vw;
         max-width: 200px;
         border-radius: "50%";
-        border: 1px solid rgb(247, 133, 250);
     }
 }
 
