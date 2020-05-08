@@ -72,12 +72,15 @@ class App extends React.Component {
     }
 
     componentDidUpdate() {
-        if ((!this.state.pageChanging.status && this.state.currentPage!==this.state.currentTheme) ||
-        (
-            this.state.pageChanging.status &&
-            this.state.currentPage===this.state.currentTheme &&
-            this.state.currentTheme!==this.state.pageChanging.targPage)
-        ) {
+        if (
+            ( //case 1: begin transition when no transition is in prog
+                !this.state.pageChanging.status && 
+                this.state.currentPage!==this.state.currentTheme
+            ) ||
+            ( //case 2: begin a trnas mid trans
+                this.state.pageChanging.status &&
+                this.state.currentPage!==this.state.pageChanging.targPage
+            )) {
             let tick = this.state.pageChanging.tick
             if (this.state.pageChanging.status && (this.state.currentPage!==this.state.currentTheme)) tick = 0
             clearInterval(this.state.changeThemeInterval)
@@ -98,7 +101,7 @@ class App extends React.Component {
         let theTick = tick
         let ticksRemaining = 90 - theTick
         let targetColors = colorThemes[targetPage]
-        let changesObj = {}
+        let changesObj = {} //this contains the rates at which each rgb value of each color type will change
         for (let colorType in startColors) {
             changesObj[colorType] = {}
             changesObj[colorType].red = (targetColors[colorType].intRed - startColors[colorType].intRed)/ticksRemaining
@@ -109,8 +112,8 @@ class App extends React.Component {
             theTick++
             let currentColors = this.state.currentColors
             for (let colorType in currentColors) {
-                if (currentColors[colorType].realRed===undefined) {
-                    currentColors[colorType].realRed = currentColors[colorType].intRed
+                if (currentColors[colorType].realRed===undefined) { //these real values are more exact but we dont want to use them for our rgb values
+                    currentColors[colorType].realRed = currentColors[colorType].intRed //they start undefined so we'll set them to the int values
                 }
                 if (currentColors[colorType].realGreen===undefined) {
                     currentColors[colorType].realGreen = currentColors[colorType].intGreen
@@ -127,16 +130,16 @@ class App extends React.Component {
             }
             console.log(currentColors)
             this.setState({currentColors: currentColors, pageChanging: {status: true, targPage: targetPage, tick: theTick}})
-            if (theTick>=90) {
+            if (theTick>=90) { //breaks after 90 ticks==1.5 sec
                 clearInterval(this.state.changeThemeInterval)
                 this.setState(
                     {
-                        currentTheme: targetPage, 
+                        currentTheme: targetPage, //we have fully transitioned to this page
                         pageChanging: {status: false, targPage: null, tick: 0},
-                        currentColors: colorThemes[targetPage]
+                        currentColors: colorThemes[targetPage] //fix rounding errors
                 })
             }
-        }, 16.67)
+        }, 16.67) //60 changes per second
         this.setState({changeThemeInterval: theInterval})
     }
 
