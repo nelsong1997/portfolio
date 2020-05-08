@@ -73,11 +73,14 @@ class App extends React.Component {
 
     componentDidUpdate() {
         if ((!this.state.pageChanging.status && this.state.currentPage!==this.state.currentTheme) ||
-        (this.state.pageChanging.status && this.state.currentPage===this.state.currentTheme)) {
+        (
+            this.state.pageChanging.status &&
+            this.state.currentPage===this.state.currentTheme &&
+            this.state.currentTheme!==this.state.pageChanging.targPage)
+        ) {
             let tick = this.state.pageChanging.tick
-            console.log(tick + "howdy")
-            console.log(this.state.pageChanging)
             if (this.state.pageChanging.status && (this.state.currentPage!==this.state.currentTheme)) tick = 0
+            clearInterval(this.state.changeThemeInterval)
             this.changeTheme(this.state.currentColors, this.state.currentPage, tick)
             this.setState(
                 {
@@ -100,33 +103,37 @@ class App extends React.Component {
             changesObj[colorType] = {}
             changesObj[colorType].red = (targetColors[colorType].intRed - startColors[colorType].intRed)/ticksRemaining
             changesObj[colorType].green = (targetColors[colorType].intGreen - startColors[colorType].intGreen)/ticksRemaining
-            changesObj[colorType].blue = (targetColors[colorType].intGreen - startColors[colorType].intGreen)/ticksRemaining
+            changesObj[colorType].blue = (targetColors[colorType].intBlue - startColors[colorType].intBlue)/ticksRemaining
         }
         let theInterval = setInterval(() => {
             theTick++
             let currentColors = this.state.currentColors
             for (let colorType in currentColors) {
-                if (currentColors[colorType].redReal===undefined) {
-                    currentColors[colorType].redReal = currentColors[colorType].redInt
+                if (currentColors[colorType].realRed===undefined) {
+                    currentColors[colorType].realRed = currentColors[colorType].intRed
                 }
-                if (currentColors[colorType].greenReal===undefined) {
-                    currentColors[colorType].greenReal = currentColors[colorType].greenInt
+                if (currentColors[colorType].realGreen===undefined) {
+                    currentColors[colorType].realGreen = currentColors[colorType].intGreen
                 }
-                if (currentColors[colorType].blueReal===undefined) {
-                    currentColors[colorType].blueReal = currentColors[colorType].blueInt
+                if (currentColors[colorType].realBlue===undefined) {
+                    currentColors[colorType].realBlue = currentColors[colorType].intBlue
                 }
-                currentColors[colorType].redReal = currentColors[colorType].redReal + changesObj[colorType].red
-                currentColors[colorType].greenReal = currentColors[colorType].greenReal + changesObj[colorType].green
-                currentColors[colorType].blueReal = currentColors[colorType].blueReal + changesObj[colorType].blue
-                currentColors[colorType].redInt = Math.round(currentColors[colorType].redReal + changesObj[colorType].red)
-                currentColors[colorType].greenInt = Math.round(currentColors[colorType].greenReal + changesObj[colorType].green)
-                currentColors[colorType].blueInt = Math.round(currentColors[colorType].blueReal + changesObj[colorType].blue)
+                currentColors[colorType].realRed = currentColors[colorType].realRed + changesObj[colorType].red
+                currentColors[colorType].realGreen = currentColors[colorType].realGreen + changesObj[colorType].green
+                currentColors[colorType].realBlue = currentColors[colorType].realBlue + changesObj[colorType].blue
+                currentColors[colorType].intRed = Math.round(currentColors[colorType].realRed + changesObj[colorType].red)
+                currentColors[colorType].intGreen = Math.round(currentColors[colorType].realGreen + changesObj[colorType].green)
+                currentColors[colorType].intBlue = Math.round(currentColors[colorType].realBlue + changesObj[colorType].blue)
             }
+            console.log(currentColors)
             this.setState({currentColors: currentColors, pageChanging: {status: true, targPage: targetPage, tick: theTick}})
-            if (theTick>=90 || theTick===undefined) {
+            if (theTick>=90) {
                 clearInterval(this.state.changeThemeInterval)
-                this.setState({currentTheme: targetPage, pageChanging: {status: false, targPage: null, tick: 0}
-                    //currentColors: colorThemes[targetPage]
+                this.setState(
+                    {
+                        currentTheme: targetPage, 
+                        pageChanging: {status: false, targPage: null, tick: 0},
+                        currentColors: colorThemes[targetPage]
                 })
             }
         }, 16.67)
