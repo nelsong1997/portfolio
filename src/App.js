@@ -27,33 +27,7 @@ class App extends React.Component {
                 targPage: null,
                 tick: 0
             },
-            currentColors: {
-                textColor: {
-                    intRed: 49,
-                    intGreen: 19,
-                    intBlue: 53
-                },
-                highlightColor: {
-                    intRed: 247,
-                    intGreen: 133,
-                    intBlue: 250
-                },
-                linkColor: {
-                    intRed: 218,
-                    intGreen: 39,
-                    intBlue: 215
-                },
-                backgroundColor1: {
-                    intRed: 94,
-                    intGreen: 36,
-                    intBlue: 102
-                },
-                backgroundColor2: {
-                    intRed: 247,
-                    intGreen: 133,
-                    intBlue: 250
-                }
-            },
+            currentColors: getColorThemes()[0],
             changeThemeInterval: null
         }
 
@@ -286,8 +260,9 @@ class App extends React.Component {
                                     At the end of my time at <a href="https://www.burlingtoncodeacademy.com/" style={linkStyle}>Burlington Code Academy</a>, 
                                     my group's capstone project was to build a web app for <a href="https://hopeworksvt.org/" style={linkStyle}>Hope Works</a>, a non-profit
                                     in Burlington that helps survivors of
-                                    sexual and domestic violence. My main focuses for this project were the form that volunteers and employees fill out
-                                    to document interactions with survivors, and this sub-project: the page that sorts and displays submitted forms.
+                                    sexual and domestic violence. My two main focuses for this project were the form that volunteers and employees fill out
+                                    to document interactions with survivors and the page that sorts and displays submitted forms. Note that this is a
+                                    re-creation of these two parts of this project for demo purposes, so some features are altered or unavailable.
                                 </p>
                                 <div className="image-box">
                                     <a href={hopeLink}><img src={hopeImage} alt="HOPE Works form viewer" style={imageStyle}></img></a>
@@ -353,7 +328,7 @@ class App extends React.Component {
                                     I fell in love with math my first year of college. My <em>
                                     <a style={linkStyle} href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=MATH#MATH106">Calculus II</a></em> professor <a
                                     href="https://web.archive.org/web/20190702112805/https://www.bates.edu/faculty-expertise/profile/henry-a-boateng/" style={linkStyle}>
-                                    Henry Boateng</a> and an eccentric personality, a wonderful sense of humor, and an infectious laugh, but his homework
+                                    Henry Boateng</a> had an eccentric personality, a wonderful sense of humor, and an infectious laugh, but his homework
                                     problems were often quite challenging! In order to solve them, I had to work with newly made friends in groups
                                     for hours on end. While it was difficult, it felt so rewarding to work together to tackle tricky problems. 
                                     Eventually I realized I wanted to be a Mathematics major because of my passion for problem solving. That same
@@ -402,6 +377,7 @@ class App extends React.Component {
                                     <img src={bowlImage} alt="a bowl" style={imageStyle}></img>
                                     <img src={cupsImage} alt="some cups" style={imageStyle}></img>
                                 </div>
+                                <label style={paragraphStyle}>Some of my work</label>
                             </div>
                             <div className="about-box">
                                 <h2 style={textStyle}>Video Games</h2>
@@ -451,70 +427,51 @@ class App extends React.Component {
 function getColorThemes() {
     return (
         [
-            {
-                textColor: {
-                    intRed: 49,
-                    intGreen: 19,
-                    intBlue: 53
-                },
-                highlightColor: {
-                    intRed: 247,
-                    intGreen: 133,
-                    intBlue: 250
-                },
-                linkColor: {
-                    intRed: 218,
-                    intGreen: 39,
-                    intBlue: 215
-                },
-                backgroundColor1: {
-                    intRed: 94,
-                    intGreen: 36,
-                    intBlue: 102
-                },
-                backgroundColor2: {
-                    intRed: 247,
-                    intGreen: 133,
-                    intBlue: 250
-                }
+            { //theme 0
+                textColor: {intRed: 49, intGreen: 19, intBlue: 53},
+                highlightColor: {intRed: 247, intGreen: 133, intBlue: 250},
+                linkColor: {intRed: 255, intGreen: 187, intBlue: 255},
+                backgroundColor1: {intRed: 94, intGreen: 36, intBlue: 102},
+                backgroundColor2: {intRed: 247, intGreen: 133, intBlue: 250}
             },
-            {
-                textColor: {
-                    intRed: 220,
-                    intGreen: 220,
-                    intBlue: 220
-                },
-                highlightColor: {
-                    intRed: 0,
-                    intGreen: 0,
-                    intBlue: 0
-                },
-                linkColor: {
-                    intRed: 15,
-                    intGreen: 211,
-                    intBlue: 234
-                },
-                backgroundColor1: {
-                    intRed: 50,
-                    intGreen: 50,
-                    intBlue: 50
-                },
-                backgroundColor2: {
-                    intRed: 20,
-                    intGreen: 20,
-                    intBlue: 20
-                }
+            { //theme 1
+                textColor: {intRed: 220, intGreen: 220, intBlue: 220},
+                highlightColor: {intRed: 0, intGreen: 0, intBlue: 0},
+                linkColor: {intRed: 255, intGreen: 255, intBlue: 255},
+                backgroundColor1: {intRed: 50, intGreen: 50, intBlue: 50},
+                backgroundColor2: {intRed: 20, intGreen: 20, intBlue: 20}
+            },
+            { //theme 2
+                textColor: {intRed: 20, intGreen: 71, intBlue: 22},
+                highlightColor: {intRed: 0, intGreen: 255, intBlue: 0},
+                linkColor: {intRed: 206, intGreen: 250, intBlue: 201},
+                backgroundColor1: {intRed: 41, intGreen: 190, intBlue: 46},
+                backgroundColor2: {intRed: 136, intGreen: 230, intBlue: 138}
+            },
+            { //theme 3
+                textColor: {intRed: 13, intGreen: 10, intBlue: 75},
+                highlightColor: {intRed: 60, intGreen: 218, intBlue: 251},
+                linkColor: {intRed: 52, intGreen: 30, intBlue: 253},
+                backgroundColor1: {intRed: 119, intGreen: 235, intBlue: 255},
+                backgroundColor2: {intRed: 69, intGreen: 122, intBlue: 248}
             }
         ]
     )
 }
 
-//color changing on page switch
+// { //hot theme
+//     textColor: {intRed: 255, intGreen: 0, intBlue: 0},
+//     highlightColor: {intRed: 255, intGreen: 0, intBlue: 121},
+//     linkColor: {intRed: 255, intGreen: 255, intBlue: 47},
+//     backgroundColor1: {intRed: 249, intGreen: 201, intBlue: 34},
+//     backgroundColor2: {intRed: 248, intGreen: 164, intBlue: 7}
+// }
+
 //html only version
 //make some guides/help for apps
 //transparency on entry?
 //smooth internal linking
 //fix color chooser
-// add event listener for page resize
+// add event listener for page resize?
 
 export default App;
