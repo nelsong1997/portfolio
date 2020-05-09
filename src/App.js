@@ -99,8 +99,8 @@ class App extends React.Component {
 
     changeTheme(startColors, targetPage, tick) {
         let theTick = tick
-        let ticksRemaining = 90 - theTick
-        let targetColors = colorThemes[targetPage]
+        let ticksRemaining = 60 - theTick
+        let targetColors = getColorThemes()[targetPage]
         let changesObj = {} //this contains the rates at which each rgb value of each color type will change
         for (let colorType in startColors) {
             changesObj[colorType] = {}
@@ -128,15 +128,14 @@ class App extends React.Component {
                 currentColors[colorType].intGreen = Math.round(currentColors[colorType].realGreen + changesObj[colorType].green)
                 currentColors[colorType].intBlue = Math.round(currentColors[colorType].realBlue + changesObj[colorType].blue)
             }
-            console.log(currentColors)
             this.setState({currentColors: currentColors, pageChanging: {status: true, targPage: targetPage, tick: theTick}})
-            if (theTick>=90) { //breaks after 90 ticks==1.5 sec
+            if (theTick>=60) { //breaks after 60 ticks==1 sec
                 clearInterval(this.state.changeThemeInterval)
                 this.setState(
                     {
                         currentTheme: targetPage, //we have fully transitioned to this page
                         pageChanging: {status: false, targPage: null, tick: 0},
-                        currentColors: colorThemes[targetPage] //fix rounding errors
+                        currentColors: targetColors //fix rounding errors
                 })
             }
         }, 16.67) //60 changes per second
@@ -235,7 +234,7 @@ class App extends React.Component {
                 </div>
                 <div id="page-1" className="page" style={oddPageStyle} ref={this.pageOne}>
                     <h1 style={textStyle}>Featured Projects</h1>
-                    <label>Click on an image to open the project!</label>
+                    <label style={paragraphStyle}>Click on an image to open the project!</label>
                     <div id="project-boxes">
                         <div className="inner-col">
                             <div className="project-box">
@@ -257,8 +256,8 @@ class App extends React.Component {
                                 <h2><a href={colorLink} style={linkStyle}>Color Chooser</a></h2>
                                 <p style={paragraphStyle}>
                                     The Color Chooser is essentially a highly customizable die. It allows the user to have the app randomly 
-                                    select a color from a user selected list, with different constraints and options, including weighting and 
-                                    pseudo-randomness. Unlike other apps I've created, this app designed with aesthetics and mobile access in mind.
+                                    select a color from a personalized list, with different constraints and options, including weighting and 
+                                    pseudo-randomness. Unlike other apps I've created, this app was designed with aesthetics and mobile access in mind.
                                 </p>
                                 <div className="image-box">
                                     <a href={colorLink} style={linkStyle}><img src={colorChooserImage} alt="color chooser" style={imageStyle}></img></a>
@@ -299,7 +298,7 @@ class App extends React.Component {
                 </div>
                 <div id="page-2" className="page" style={evenPageStyle} ref={this.pageTwo}>
                     <h1 style={textStyle}>Work Goals</h1>
-                    <label>What kind of job am I looking for?</label>
+                    <label style={paragraphStyle}>What kind of job am I looking for?</label>
                     <div id="goal-boxes">
                         <div className="inner-col">
                             <div className="goal-box">
@@ -368,7 +367,7 @@ class App extends React.Component {
                             <div className="image-box">
                                 <img src={groupImage} alt="BCA capstone group" style={imageStyle}></img>
                             </div>
-                            <label>Our Burlington Code Academy HOPE Works capstone group</label>
+                            <label style={paragraphStyle}>Our Burlington Code Academy HOPE Works capstone group</label>
                         </div>
                     
                 </div>
@@ -449,62 +448,66 @@ class App extends React.Component {
 
 //-------- color theme objs -------------//
 
-const colorThemes = [
-    {
-        textColor: {
-            intRed: 49,
-            intGreen: 19,
-            intBlue: 53
-        },
-        highlightColor: {
-            intRed: 247,
-            intGreen: 133,
-            intBlue: 250
-        },
-        linkColor: {
-            intRed: 218,
-            intGreen: 39,
-            intBlue: 215
-        },
-        backgroundColor1: {
-            intRed: 94,
-            intGreen: 36,
-            intBlue: 102
-        },
-        backgroundColor2: {
-            intRed: 247,
-            intGreen: 133,
-            intBlue: 250
-        }
-    },
-    {
-        textColor: {
-            intRed: 0,
-            intGreen: 0,
-            intBlue: 0
-        },
-        highlightColor: {
-            intRed: 0,
-            intGreen: 0,
-            intBlue: 0
-        },
-        linkColor: {
-            intRed: 0,
-            intGreen: 0,
-            intBlue: 0
-        },
-        backgroundColor1: {
-            intRed: 0,
-            intGreen: 0,
-            intBlue: 0
-        },
-        backgroundColor2: {
-            intRed: 0,
-            intGreen: 0,
-            intBlue: 0
-        }
-    }
-]
+function getColorThemes() {
+    return (
+        [
+            {
+                textColor: {
+                    intRed: 49,
+                    intGreen: 19,
+                    intBlue: 53
+                },
+                highlightColor: {
+                    intRed: 247,
+                    intGreen: 133,
+                    intBlue: 250
+                },
+                linkColor: {
+                    intRed: 218,
+                    intGreen: 39,
+                    intBlue: 215
+                },
+                backgroundColor1: {
+                    intRed: 94,
+                    intGreen: 36,
+                    intBlue: 102
+                },
+                backgroundColor2: {
+                    intRed: 247,
+                    intGreen: 133,
+                    intBlue: 250
+                }
+            },
+            {
+                textColor: {
+                    intRed: 220,
+                    intGreen: 220,
+                    intBlue: 220
+                },
+                highlightColor: {
+                    intRed: 0,
+                    intGreen: 0,
+                    intBlue: 0
+                },
+                linkColor: {
+                    intRed: 15,
+                    intGreen: 211,
+                    intBlue: 234
+                },
+                backgroundColor1: {
+                    intRed: 50,
+                    intGreen: 50,
+                    intBlue: 50
+                },
+                backgroundColor2: {
+                    intRed: 20,
+                    intGreen: 20,
+                    intBlue: 20
+                }
+            }
+        ]
+    )
+}
 
 //color changing on page switch
 //html only version
