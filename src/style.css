@@ -101,7 +101,8 @@ hr {
 
     #page-0 > h2 {
         font-size: 7vw;
-        margin: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
     .break-bar {
