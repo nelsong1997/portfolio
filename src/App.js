@@ -123,12 +123,16 @@ class App extends React.Component {
         if (targetPage===1) targetPageHeight = this.state.pageOnePosition
         else if (targetPage===2) targetPageHeight = this.state.pageTwoPosition
         else if (targetPage===3) targetPageHeight = this.state.pageThreePosition
-        let distance = targetPageHeight - window.pageYOffset + 30
+        let startHeight = window.pageYOffset
+        let distance = targetPageHeight - startHeight
         let k = distance/900
         let x = 0
+        let distanceMoved = startHeight
         let pageJumpInterval = setInterval(() => {
             x++
-            window.scrollBy(0, -k*Math.abs(x-30) + k*30)
+            distanceMoved += -k*Math.abs(x-30) + k*30
+            let distanceThisScroll = distanceMoved - window.pageYOffset
+            window.scrollBy(0, distanceThisScroll)
             if (x>=60) {
                 clearInterval(pageJumpInterval)
             }
@@ -289,6 +293,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <h3 id="jump-0" className="bb-text" style={linkStyle} onClick={this.pageJump}>Back to Top ↑</h3>
                 </div>
                 <div id="page-2" className="page" style={evenPageStyle} ref={this.pageTwo}>
                     <h1 style={textStyle}>Work Goals</h1>
@@ -357,13 +362,13 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                        <div className="goal-box">
-                            <div className="image-box">
-                                <img src={groupImage} alt="BCA capstone group" style={imageStyle}></img>
-                            </div>
-                            <label style={paragraphStyle}>Our Burlington Code Academy HOPE Works capstone group</label>
+                    <div className="goal-box">
+                        <div className="image-box">
+                            <img src={groupImage} alt="BCA capstone group" style={imageStyle}></img>
                         </div>
-                    
+                        <label style={paragraphStyle}>Our Burlington Code Academy HOPE Works capstone group</label>
+                    </div>
+                    <h3 id="jump-0" className="bb-text" style={linkStyle} onClick={this.pageJump}>Back to Top ↑</h3>
                 </div>
                 <div id="page-3" className="page" style={oddPageStyle} ref={this.pageThree}>
                     <h1 style={textStyle}>More About Me</h1>
@@ -435,6 +440,7 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <h3 id="jump-0" className="bb-text" style={linkStyle} onClick={this.pageJump}>Back to Top ↑</h3>
                 </div>
             </div>
         )
