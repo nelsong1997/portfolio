@@ -26,7 +26,11 @@ p, h1, h2, h3, h4, label {
     justify-content: space-between;
 }
 
-.break-bar > .bb-spacer {
+.break-bar > div {
+    display: flex;
+}
+
+.break-bar > div > .bb-spacer, .break-bar > .bb-spacer {
     width: 50px;
     display: flex;
     justify-content: center;
@@ -71,6 +75,14 @@ a {
     border-radius: 50%;
 }
 
+.bb-text {
+    cursor: pointer;
+}
+
+hr {
+    visibility: hidden;
+}
+
 @media screen and (max-width: 1040px) {
     #project-boxes, #goal-boxes, #about-boxes {
         display: flex;
@@ -87,26 +99,34 @@ a {
         margin: 0px;
     }
 
-    .break-bar > h2 {
-        font-size: 2.67vw;
+    #page-0 > h2 {
+        font-size: 7vw;
+        margin: 10px;
     }
 
-    .break-bar > h3 {
-        font-size: 2.67vw;
+    .break-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .paragraph {
-        max-width: 90vw;
-    }
-
-    .paragraph > p {
-        font-size: 2.4vw
+    .break-bar > h3, .break-bar > div > h3 {
+        margin: 5px;
+        font-size: 5vw;
     }
 
     .break-bar > .bb-spacer {
-        width: 5vw;
+        display: none;
     }
 
+    .break-bar > div:nth-child(2) > .bb-spacer {
+        display: none;
+    }
+
+    .break-bar > div:nth-child(1) > .bb-spacer {
+        width: 10vw
+    }
+    
     #me-img {
         max-height: 90vw;
         max-height: 200px;
@@ -114,10 +134,12 @@ a {
         max-width: 200px;
         border-radius: "50%";
     }
-}
 
-.bb-text {
-    cursor: pointer;
+    hr {
+        visibility: visible;
+        width: 80vw;
+        margin: 15px;
+    }
 }
 
 @media screen and (max-width: 533px) {

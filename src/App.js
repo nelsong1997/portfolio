@@ -52,7 +52,7 @@ class App extends React.Component {
                 !this.state.pageChanging.status && 
                 this.state.currentPage!==this.state.currentTheme
             ) ||
-            ( //case 2: begin a trnas mid trans
+            ( //case 2: begin a transition mid transition
                 this.state.pageChanging.status &&
                 this.state.currentPage!==this.state.pageChanging.targPage
             )) {
@@ -189,39 +189,29 @@ class App extends React.Component {
         let oddPageStyle = {backgroundImage: `linear-gradient(to top, ${backgroundColor1String}, ${backgroundColor2String}`}
         let linkStyle = {color: linkColorString, textShadow: `1px 1px ${textColorString}`}
         let paragraphStyle = {color: textColorString}
+        let ruleStyle = {border: `1px solid ${textColorString}`}
 
         return (
             <div id="main" style={{backgroundColor: backgroundColor1String}}>
                 <div id="page-0" className="page" style={evenPageStyle}>
                     <h1 style={textStyle}>Hi, I'm Gabe.</h1>
                     <img id="me-img" src={me} alt="me" style={imageStyle}></img>
-                    <div id="break-bar-0" className="break-bar">
-                        <h2 className="bb-text" style={textStyle}>Aspiring Developer</h2>
-                        <h2 className="bb-spacer" style={textStyle}>|</h2>
-                        <h2 className="bb-text" style={textStyle}>Recent College Grad</h2>
-                        <h2 className="bb-spacer" style={textStyle}>|</h2>
-                        <h2 className="bb-text" style={textStyle}>Human Being</h2>
+                    <h2 className="bb-text" style={textStyle}>I'm an aspiring developer.</h2>
+                    <div className="break-bar">
+                        <div>
+                            <h3 className="bb-text"><a href="https://github.com/nelsong1997" style={linkStyle}>Github</a></h3>
+                            <h3 className="bb-spacer" style={textStyle}>|</h3>
+                            <h3 className="bb-text"><a href={resume} style={linkStyle}>Resume</a></h3>
+                            <h3 className="bb-spacer" style={textStyle}>|</h3>
+                            <h3 className="bb-text"><a href="https://www.linkedin.com/in/nelsong1997/" style={linkStyle}>Linkedin</a></h3>
+                        </div>
+                        <div>
+                            <h3 className="bb-spacer" style={textStyle}>|</h3>
+                            <h3 className="bb-text"><a href="mailto:nelsong1997@gmail.com" style={linkStyle}>nelsong1997@gmail.com</a></h3>
+                        </div>
                     </div>
-                    <div className="paragraph">
-                        <p style={paragraphStyle}>
-                            Let's get right to it... If you're looking for important links, I'll put those right below:
-                        </p>
-                    </div>
-                    <div id="break-bar-1" className="break-bar">
-                        <h3 className="bb-text"><a href="https://github.com/nelsong1997" style={linkStyle}>Github</a></h3>
-                        <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 className="bb-text"><a href={resume} style={linkStyle}>Resume</a></h3>
-                        <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 className="bb-text"><a href="https://www.linkedin.com/in/nelsong1997/" style={linkStyle}>Linkedin</a></h3>
-                        <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 className="bb-text"><a href="mailto:nelsong1997@gmail.com" style={linkStyle}>nelsong1997@gmail.com</a></h3>
-                    </div>
-                    <div className="paragraph">
-                        <p style={paragraphStyle}>
-                            Otherwise, stick around and either scroll or click a section to jump down to view some of my work and more about me!
-                        </p>
-                    </div>
-                    <div id="break-bar-2" className="break-bar">
+                    <hr style={ruleStyle}/>
+                    <div className="break-bar">
                         <h3 id="jump-1" className="bb-text" style={linkStyle} onClick={this.pageJump}>My Work ↓</h3>
                         <h3 className="bb-spacer" style={textStyle}>|</h3>
                         <h3 id="jump-2" className="bb-text" style={linkStyle} onClick={this.pageJump}>Career Aspirations ↓</h3>
