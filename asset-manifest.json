@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d7b802ae.chunk.css",
-    "main.js": "/portfolio/static/js/main.e6470b13.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.e6470b13.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.a0ec0123.chunk.css",
+    "main.js": "/portfolio/static/js/main.ff402a4b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ff402a4b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
     "static/js/2.103ad9f5.chunk.js": "/portfolio/static/js/2.103ad9f5.chunk.js",
     "static/js/2.103ad9f5.chunk.js.map": "/portfolio/static/js/2.103ad9f5.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.518a3e52f2a127c55c7142be9c1518c5.js": "/portfolio/precache-manifest.518a3e52f2a127c55c7142be9c1518c5.js",
+    "precache-manifest.5e7c5617b57403c73921217848e5d52e.js": "/portfolio/precache-manifest.5e7c5617b57403c73921217848e5d52e.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.d7b802ae.chunk.css.map": "/portfolio/static/css/main.d7b802ae.chunk.css.map",
+    "static/css/main.a0ec0123.chunk.css.map": "/portfolio/static/css/main.a0ec0123.chunk.css.map",
     "static/js/2.103ad9f5.chunk.js.LICENSE.txt": "/portfolio/static/js/2.103ad9f5.chunk.js.LICENSE.txt",
     "static/media/Gabe_Nelson_Resume_5-4-20.pdf": "/portfolio/static/media/Gabe_Nelson_Resume_5-4-20.ccb10d95.pdf",
     "static/media/bca_group.jpg": "/portfolio/static/media/bca_group.9764ca0f.jpg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.f4f2abbf.js",
     "static/js/2.103ad9f5.chunk.js",
-    "static/css/main.d7b802ae.chunk.css",
-    "static/js/main.e6470b13.chunk.js"
+    "static/css/main.a0ec0123.chunk.css",
+    "static/js/main.ff402a4b.chunk.js"
   ]
 }
