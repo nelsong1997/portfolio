@@ -221,7 +221,9 @@ class App extends React.Component {
                 </div>
                 <div id="page-1" className="page" style={oddPageStyle} ref={this.pageOne}>
                     <h1 style={textStyle}>Featured Projects</h1>
-                    <label style={paragraphStyle}>Click on an image to open the project!</label>
+                    <label style={{color: textColorString, maxWidth: "90vw"}}>
+                        Click on an image to open the project! (Note: most of these apps are not mobile accessible)
+                    </label>
                     <div id="project-boxes">
                         <div className="inner-col">
                             <div className="project-box">
@@ -245,6 +247,10 @@ class App extends React.Component {
                                     The Color Chooser is essentially a highly customizable die. It allows the user to have the app randomly 
                                     select a color from a personalized list, with different constraints and options, including weighting and 
                                     pseudo-randomness. Unlike other apps I've created, this app was designed with aesthetics and mobile access in mind.
+                                </p>
+                                <p style={paragraphStyle}>
+                                    To use, click or touch the screen to start choosing a random color. To reset, click/touch and hold. While on
+                                    the start screen, click/touch and hold to open the options menu (click the "x" to exit).
                                 </p>
                                 <div className="image-box">
                                     <a href={colorLink} style={linkStyle}><img src={colorChooserImage} alt="color chooser" style={imageStyle}></img></a>
@@ -484,7 +490,5 @@ function getColorThemes() {
 
 //html only version
 //make some guides/help for apps
-//fix color chooser
-//improve text sizing esp on mobile
 
 export default App;

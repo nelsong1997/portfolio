@@ -81,6 +81,11 @@ a {
 
 hr {
     visibility: hidden;
+    margin: 0px;
+}
+
+.project-box > p:nth-child(3) {
+    margin-top: 0px;
 }
 
 @media screen and (max-width: 1040px) {
