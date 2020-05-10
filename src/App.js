@@ -38,6 +38,7 @@ class App extends React.Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.setPagePositions = this.setPagePositions.bind(this);
         this.changeTheme = this.changeTheme.bind(this);
+        this.pageJump = this.pageJump.bind(this);
     }
 
     componentDidMount() {
@@ -116,6 +117,24 @@ class App extends React.Component {
         this.setState({changeThemeInterval: theInterval})
     }
 
+    pageJump(e) {
+        let targetPage = Number(e.target.id.slice(-1))
+        let targetPageHeight = 0
+        if (targetPage===1) targetPageHeight = this.state.pageOnePosition
+        else if (targetPage===2) targetPageHeight = this.state.pageTwoPosition
+        else if (targetPage===3) targetPageHeight = this.state.pageThreePosition
+        let distance = targetPageHeight - window.pageYOffset + 30
+        let k = distance/900
+        let x = 0
+        let pageJumpInterval = setInterval(() => {
+            x++
+            window.scrollBy(0, -k*Math.abs(x-30) + k*30)
+            if (x>=60) {
+                clearInterval(pageJumpInterval)
+            }
+        }, 16.67)
+    }
+
     handleScroll() {
         let currentPosition = window.pageYOffset + window.innerHeight/2 //the middle of the viewport
         if (this.state.currentPage!==0 && currentPosition < this.state.pageOnePosition - 20) {
@@ -168,7 +187,7 @@ class App extends React.Component {
         let paragraphStyle = {color: textColorString}
 
         return (
-            <div id="main">
+            <div id="main" style={{backgroundColor: backgroundColor1String}}>
                 <div id="page-0" className="page" style={evenPageStyle}>
                     <h1 style={textStyle}>Hi, I'm Gabe.</h1>
                     <img id="me-img" src={me} alt="me" style={imageStyle}></img>
@@ -195,15 +214,15 @@ class App extends React.Component {
                     </div>
                     <div className="paragraph">
                         <p style={paragraphStyle}>
-                            Otherwise, stick around and either scroll or jump down to view some of my work and more about me!
+                            Otherwise, stick around and either scroll or click a section to jump down to view some of my work and more about me!
                         </p>
                     </div>
                     <div id="break-bar-2" className="break-bar">
-                        <h3 className="bb-text"><a href="#page-1" style={linkStyle}>My Work ↓</a></h3>
+                        <h3 id="jump-1" className="bb-text" style={linkStyle} onClick={this.pageJump}>My Work ↓</h3>
                         <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 className="bb-text"><a href="#page-2" style={linkStyle}>Career Aspirations ↓</a></h3>
+                        <h3 id="jump-2" className="bb-text" style={linkStyle} onClick={this.pageJump}>Career Aspirations ↓</h3>
                         <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 className="bb-text"><a href="#page-3" style={linkStyle}>More About Me ↓</a></h3>
+                        <h3 id="jump-3" className="bb-text" style={linkStyle} onClick={this.pageJump}>More About Me ↓</h3>
                     </div>
                 </div>
                 <div id="page-1" className="page" style={oddPageStyle} ref={this.pageOne}>
@@ -469,9 +488,7 @@ function getColorThemes() {
 
 //html only version
 //make some guides/help for apps
-//transparency on entry?
-//smooth internal linking
 //fix color chooser
-// add event listener for page resize?
+//improve text sizing esp on mobile
 
 export default App;
