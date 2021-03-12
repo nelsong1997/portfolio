@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43dc2fc71cd06cd229992f2602b04e4e",
+    "revision": "311352519f430191e05adc6191accfa9",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "d6e36b9fdd46efcd22cb",
+    "revision": "af8f9b407054d7108602",
     "url": "/portfolio/static/css/main.a0ec0123.chunk.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.103ad9f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d6e36b9fdd46efcd22cb",
-    "url": "/portfolio/static/js/main.1f104a01.chunk.js"
+    "revision": "af8f9b407054d7108602",
+    "url": "/portfolio/static/js/main.0278e5b4.chunk.js"
   },
   {
     "revision": "e5284505c87d0b24b753",
     "url": "/portfolio/static/js/runtime-main.f4f2abbf.js"
   },
   {
-    "revision": "f02c785b66b2c170c81f2f736b47ef96",
-    "url": "/portfolio/static/media/GabeNelsonResume_6-3-20.f02c785b.pdf"
+    "revision": "101d6747c39fd8effeccb518212d6b87",
+    "url": "/portfolio/static/media/GabeNelsonResume_3-11-21.101d6747.pdf"
   },
   {
     "revision": "9764ca0f34b71b33775e1b9652dd84ff",
