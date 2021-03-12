@@ -1,6 +1,6 @@
 import React from 'react';
 import me from './assets/me.jpg'
-import resume from './assets/GabeNelsonResume_6-3-20.pdf'
+import resume from './assets/GabeNelsonResume_3-11-21.pdf'
 import zombieImage from './assets/zombie-disease-game.png'
 import colorChooserImage from './assets/colorchooser.png'
 import dihedralImage from './assets/dihedral-calculator.png'
@@ -276,7 +276,7 @@ class App extends React.Component {
                             <div className="project-box">
                                 <h2><a href={hopeLink} style={linkStyle}>HOPE Works Capstone</a></h2>
                                 <p style={paragraphStyle}>
-                                    At the end of my time at <a href="https://www.burlingtoncodeacademy.com/" style={linkStyle}>Burlington Code Academy</a>, 
+                                    At the end of my time at the <a href="https://www.burlingtoncodeacademy.com/" style={linkStyle}>Burlington Code Academy</a>, 
                                     my group's capstone project was to build a web app for <a href="https://hopeworksvt.org/" style={linkStyle}>Hope Works</a>, a non-profit
                                     in Burlington that helps survivors of
                                     sexual and domestic violence. My two main focuses for this project were the form that volunteers and employees fill out
@@ -299,12 +299,12 @@ class App extends React.Component {
                             <div className="goal-box">
                                 <h2 style={textStyle}>What</h2>
                                 <p style={paragraphStyle}>
-                                    The softwares I'm interested in creating are basically tools, even if they are small parts of much bigger tools. 
+                                    The softwares I'm interested in creating are basically tools, even if they are just small parts of much bigger applications. 
                                     They are used to make some task simpler, faster, or less
                                     frustrating. No matter what I end up doing, I want to be helping people in some way. While I would ideally love to work
                                     on projects that help people in difficult life situations or that help make our society more equitable, I would settle 
                                     for making people's day to day lives easier by making the apps they use every day more effective and easier to use. That
-                                    being said, I definitely don't want to work for any company that is exploitative, deceptive, or predatory in any way.
+                                    being said, I am not interested in working for any company that is exploitative, deceptive, or predatory in any way.
                                 </p>
                             </div>
                             <div className="goal-box">
@@ -314,18 +314,8 @@ class App extends React.Component {
                                         href="https://www.google.com/maps/place/South+Burlington,+VT
                                         /@44.4677575,-73.2981026">South Burlington, Vermont</a>.
                                     I love the Burlington area and working here would be
-                                    great, but I am also excited by the idea of moving away to a big city and starting my own adventure in a new place.
+                                    great, but I am also excited by the idea of moving away and starting my own adventure in a new place.
                                     I am open to different possibilities about where I'll work!
-                                </p>
-                            </div>
-                            <div className="goal-box">
-                                <h2 style={textStyle}>When</h2>
-                                <p style={paragraphStyle}>
-                                    I am currently planning to work for <a style={linkStyle} href="https://campabnaki.org/">YMCA Camp Abnaki</a> as a Village Leader this summer,
-                                    but we are not sure how the COVID-19
-                                    crisis will affect Camp this summer. It seems like, at the very least, drastic changes will have to take place in order for
-                                    Camp to run. Hopefully I will get to work at Camp this summer and I'll be available starting in the Fall, but it is possible
-                                    I will be available much sooner!
                                 </p>
                             </div>
                         </div>
@@ -338,21 +328,21 @@ class App extends React.Component {
                                     that claim to follow these types of philosophies actually follow through. To me, it doesn't matter what you call it:
                                     I'm for collaborative, adaptable, and functional development where teammates respect and support one another. This will
                                     be essential to me especially as I start off, since I am partially a self-taught programmer and I am not aware of a lot
-                                    of conventions or best practice solutions to problems. While I'll pick these up quickly once I'm on the job, responsive
+                                    of conventions or best practice solutions to problems. While I am a fast learner and I'll pick these up quickly once I'm on the job, responsive
                                     and helpful mentors will be a vital part of my learning.
                                 </p>
                             </div>
                             <div className="goal-box">
                                 <h2 style={textStyle}>Why</h2>
                                 <p style={paragraphStyle}>
-                                    I fell in love with math my first year of college. My <em>
+                                    I fell in love with math during first semester of college. My <em>
                                     <a style={linkStyle} href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=MATH#MATH106">Calculus II</a></em> professor <a
                                     href="https://web.archive.org/web/20190702112805/https://www.bates.edu/faculty-expertise/profile/henry-a-boateng/" style={linkStyle}>
                                     Henry Boateng</a> had an eccentric personality, a wonderful sense of humor, and an infectious laugh, but his homework
                                     problems were often quite challenging! In order to solve them, I had to work with newly made friends in groups
-                                    for hours on end. While it was difficult, it felt so rewarding to work together to tackle tricky problems. 
+                                    for hours on end. While it was difficult, it was also immensely rewarding to work together to tackle tricky problems. 
                                     Eventually I realized I wanted to be a Mathematics major because of my passion for problem solving. That same
-                                    passion drives me to problem solve through programming, in which the problem solving process is often quite
+                                    passion drives me to problem solve through programming, in which (to me) the problem solving process is often quite
                                     similar.
                                 </p>
                             </div>
@@ -378,7 +368,7 @@ class App extends React.Component {
                                     /@44.4677575,-73.2981026">South Burlington, Vermont</a>. I went to <a style={linkStyle}
                                     href="https://www.sbschools.net/Domain/8">South Burlington High School</a> and later attended <a style={linkStyle}
                                     href="https://www.bates.edu/">Bates College</a>,
-                                    where in May I will graduate with a Bachelors degree in <a style={linkStyle}
+                                    where in May, 2020 I graduated with a Bachelors degree in <a style={linkStyle}
                                     href="https://www.bates.edu/mathematics/academics/academic-program/">Mathematics</a>, with a <a style={linkStyle}
                                     href="https://www.bates.edu/german-russian/academics/russian/academic-program/">Russian minor</a> and a <a style={linkStyle}
                                     href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=GEC#C084">Learning and Teaching</a> General
@@ -389,9 +379,10 @@ class App extends React.Component {
                                 <h2 style={textStyle}>Pottery</h2>
                                 <p style={paragraphStyle}>
                                     Pottery is one of my favorite hobbies. I've done it on and off since I was young. Not only is it relaxing and fun to do,
-                                    it also allows me to express myself and share my final products with my family and friends. Pottery is a challenging craft and
-                                    there's always more to learn, and it's more rewarding the more you do it. If you're in or around Burlington, check out <a style={linkStyle} 
-                                    href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, where I've done most of my pottery.
+                                    it also allows me to express myself and share my final products with my family and friends. Pottery is a challenging and
+                                    highly rewarding craft and there's always more to learn. I have made pottery at <a style={linkStyle} 
+                                    href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, in college classes, and since the beginning
+                                    of 2021, at the <a href="https://middleburystudioschool.org/">Middlebury Studio School</a>.
                                 </p>
                                 <div className="image-box">
                                     <img src={bowlImage} alt="a bowl" style={imageStyle}></img>
@@ -402,9 +393,9 @@ class App extends React.Component {
                             <div className="about-box">
                                 <h2 style={textStyle}>Video Games</h2>
                                 <p style={paragraphStyle}>
-                                    Like a lot of people my age, especially during this Pandemic, I play a lot of video games. I particularly enjoy competitive
-                                    multiplayer games that combine skill and execution with strategy and planning. They're also just a great way to spend time with 
-                                    friends doing something fun. My favorite game right now is <a style={linkStyle}
+                                    I've always enjoyed playing video games. I am particularly interested in competitive
+                                    multiplayer games that combine skill and execution with strategy and planning. They're also just a really fun way to spend time with 
+                                    friends. My favorite game right now is <a style={linkStyle}
                                     href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee">Super Smash Bros. Melee</a>.
                                 </p>
                             </div>
@@ -413,7 +404,7 @@ class App extends React.Component {
                             <div className="about-box">
                                 <h2 style={textStyle}>Biking</h2>
                                 <p style={paragraphStyle}>
-                                    While I've always enjoyed biking, I've really started biking a lot more since I bought a used road bike last summer. I
+                                    While I've always enjoyed biking, I've really started biking a lot more since I bought a used road bike in the summer of 2019. I
                                     used it to commute to Burlington Code Academy from home. For me, it's a great way to get outside and enjoy our beautiful
                                     community and get some exercise.
                                 </p>
@@ -427,8 +418,7 @@ class App extends React.Component {
                                     I love both playing and listening to music. I've been playing music since 2nd grade, and I have played the piano, recorder,
                                     clarinet, and euphonium. In college I played in the <a style={linkStyle}
                                     href="https://www.bates.edu/music/the-brass-ensemble/">Bates Brass Ensemble</a> (pictured below). Most of my enjoyment comes 
-                                    from playing as part of a group, but I don't know if I'll have
-                                    any opportunities to continue playing in an ensemble now that I've graduated.
+                                    from playing as part of a group, which I haven't gotten to do since I left my college campus in March of 2020.
                                 </p>
                                 <div className="image-box">
                                     <img src={brassImage} alt="Bates Brass Ensemble" style={imageStyle}></img>
