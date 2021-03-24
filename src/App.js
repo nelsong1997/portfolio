@@ -1,6 +1,6 @@
 import React from 'react';
 import me from './assets/me.jpg'
-import resume from './assets/GabeNelsonResume_3-11-21.pdf'
+import resume from './assets/GabeNelsonResume_3-23-21.pdf'
 import zombieImage from './assets/zombie-disease-game.png'
 import colorChooserImage from './assets/colorchooser.png'
 import dihedralImage from './assets/dihedral-calculator.png'
