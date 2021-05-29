@@ -4,6 +4,7 @@ import resume from './assets/GabeNelsonResume_3-23-21.pdf'
 import zombieImage from './assets/zombie-disease-game.png'
 import colorChooserImage from './assets/colorchooser.png'
 import dihedralImage from './assets/dihedral-calculator.png'
+import discordImage from './assets/discord.png'
 import bowlImage from './assets/bowl.png'
 import cupsImage from './assets/cups.jpg'
 import bikeImage from './assets/bike.jpg'
@@ -175,6 +176,7 @@ class App extends React.Component {
         let zombieLink = "https://nelsong1997.github.io/zombie_game/"
         let colorLink = "https://nelsong1997.github.io/color_chooser/"
         let hopeLink = "https://nelsong1997.github.io/hope-works-2/"
+        let gabebotLink = "https://nelsong1997.github.io/gabebot/"
 
         let currentColors = this.state.currentColors
         let textColorString = `rgb(${currentColors.textColor.intRed}, ${currentColors.textColor.intGreen}, ${currentColors.textColor.intBlue})`
@@ -289,6 +291,19 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className="project-box">
+                            <h2><a href={gabebotLink} style={linkStyle}>gabebot</a></h2>
+                            <p style={paragraphStyle}>
+                                gabebot is a simple <a href="https://discord.com" style={linkStyle}>discord</a> bot that has a few basic capabilities,
+                                including coin flipping, dice rolling, and welcome messages.
+                                It does have one relatively unique feature: Voice Logging.
+                                In other words, gabebot can keep track of when people join, leave, and switch between the voice channels of your server.
+                                This lets you quickly solve the mysteries of "who just left the voice call?" or "who keeps joining and then leaving right away?"
+                            </p>
+                            <div className="image-box">
+                                <a href={gabebotLink}><img src={discordImage} alt="gabebot" style={imageStyle}></img></a>
+                            </div>
+                        </div>
                     <h3 id="jump-0" className="bb-text" style={linkStyle} onClick={this.pageJump}>Back to Top ↑</h3>
                 </div>
                 <div id="page-2" className="page" style={evenPageStyle} ref={this.pageTwo}>
