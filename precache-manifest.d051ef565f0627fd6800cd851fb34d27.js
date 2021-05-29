@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21d55b44082d9fe7584569f00e413744",
+    "revision": "899f29b1fce0aa942b6f637cad1dc608",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "917a7433904d6a0a9597",
+    "revision": "aa553f601c117eba4cdb",
     "url": "/portfolio/static/css/main.a0ec0123.chunk.css"
   },
   {
-    "revision": "1acdb433eece187dae5f",
-    "url": "/portfolio/static/js/2.103ad9f5.chunk.js"
+    "revision": "d703a9b696a8ededc779",
+    "url": "/portfolio/static/js/2.f6b69fce.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/portfolio/static/js/2.103ad9f5.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.f6b69fce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "917a7433904d6a0a9597",
-    "url": "/portfolio/static/js/main.e80930e8.chunk.js"
+    "revision": "aa553f601c117eba4cdb",
+    "url": "/portfolio/static/js/main.7676a5fb.chunk.js"
   },
   {
     "revision": "e5284505c87d0b24b753",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "632618f63d82bc28f9fe480a79a2d6ab",
     "url": "/portfolio/static/media/dihedral-calculator.632618f6.png"
+  },
+  {
+    "revision": "3fd9545a638f0a2c9618f54358f566b3",
+    "url": "/portfolio/static/media/discord.3fd9545a.png"
   },
   {
     "revision": "dff71439a1cdff45ebc2c869c79fa59a",

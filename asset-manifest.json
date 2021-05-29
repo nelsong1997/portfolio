@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a0ec0123.chunk.css",
-    "main.js": "/portfolio/static/js/main.e80930e8.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.e80930e8.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.7676a5fb.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7676a5fb.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
-    "static/js/2.103ad9f5.chunk.js": "/portfolio/static/js/2.103ad9f5.chunk.js",
-    "static/js/2.103ad9f5.chunk.js.map": "/portfolio/static/js/2.103ad9f5.chunk.js.map",
+    "static/js/2.f6b69fce.chunk.js": "/portfolio/static/js/2.f6b69fce.chunk.js",
+    "static/js/2.f6b69fce.chunk.js.map": "/portfolio/static/js/2.f6b69fce.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.c9f889fdd5223eac567c85523dac3233.js": "/portfolio/precache-manifest.c9f889fdd5223eac567c85523dac3233.js",
+    "precache-manifest.d051ef565f0627fd6800cd851fb34d27.js": "/portfolio/precache-manifest.d051ef565f0627fd6800cd851fb34d27.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/main.a0ec0123.chunk.css.map": "/portfolio/static/css/main.a0ec0123.chunk.css.map",
-    "static/js/2.103ad9f5.chunk.js.LICENSE.txt": "/portfolio/static/js/2.103ad9f5.chunk.js.LICENSE.txt",
+    "static/js/2.f6b69fce.chunk.js.LICENSE.txt": "/portfolio/static/js/2.f6b69fce.chunk.js.LICENSE.txt",
     "static/media/GabeNelsonResume_3-23-21.pdf": "/portfolio/static/media/GabeNelsonResume_3-23-21.3adefbd0.pdf",
     "static/media/bca_group.jpg": "/portfolio/static/media/bca_group.9764ca0f.jpg",
     "static/media/bike.jpg": "/portfolio/static/media/bike.19302495.jpg",
@@ -20,14 +20,15 @@
     "static/media/colorchooser.png": "/portfolio/static/media/colorchooser.93958466.png",
     "static/media/cups.jpg": "/portfolio/static/media/cups.0dc4b889.jpg",
     "static/media/dihedral-calculator.png": "/portfolio/static/media/dihedral-calculator.632618f6.png",
+    "static/media/discord.png": "/portfolio/static/media/discord.3fd9545a.png",
     "static/media/hw_image.png": "/portfolio/static/media/hw_image.dff71439.png",
     "static/media/me.jpg": "/portfolio/static/media/me.49f0ad89.jpg",
     "static/media/zombie-disease-game.png": "/portfolio/static/media/zombie-disease-game.ded3188f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f4f2abbf.js",
-    "static/js/2.103ad9f5.chunk.js",
+    "static/js/2.f6b69fce.chunk.js",
     "static/css/main.a0ec0123.chunk.css",
-    "static/js/main.e80930e8.chunk.js"
+    "static/js/main.7676a5fb.chunk.js"
   ]
 }
