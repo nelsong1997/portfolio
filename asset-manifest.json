@@ -1,34 +1,25 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.a0ec0123.chunk.css",
-    "main.js": "/portfolio/static/js/main.7676a5fb.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7676a5fb.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
-    "static/js/2.f6b69fce.chunk.js": "/portfolio/static/js/2.f6b69fce.chunk.js",
-    "static/js/2.f6b69fce.chunk.js.map": "/portfolio/static/js/2.f6b69fce.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.b1f60937.css",
+    "main.js": "/portfolio/static/js/main.ed62098c.js",
+    "static/media/bowl.png": "/portfolio/static/media/bowl.7bfc5c1b4c70a2d3ccfa.png",
+    "static/media/bca_group.jpg": "/portfolio/static/media/bca_group.13b5a7e45b9e27f186b3.jpg",
+    "static/media/bike.jpg": "/portfolio/static/media/bike.784558fe586a173ca1e0.jpg",
+    "static/media/cups.jpg": "/portfolio/static/media/cups.433aabf6413466440f4a.jpg",
+    "static/media/brass.jpg": "/portfolio/static/media/brass.bf6def5919fa06f6a327.jpg",
+    "static/media/zombie-disease-game.png": "/portfolio/static/media/zombie-disease-game.5dd075d57e1749a46418.png",
+    "static/media/hw_image.png": "/portfolio/static/media/hw_image.84a59414e5501c72f335.png",
+    "static/media/GabeNelsonResume_2-2-22.pdf": "/portfolio/static/media/GabeNelsonResume_2-2-22.d50a157379b4fd51f279.pdf",
+    "static/media/dihedral-calculator.png": "/portfolio/static/media/dihedral-calculator.eb20a20324f88cbcad21.png",
+    "static/media/colorchooser.png": "/portfolio/static/media/colorchooser.3f992cf6eb9a4ff3439b.png",
+    "static/media/me.jpg": "/portfolio/static/media/me.e56fdd6a8f5d6bf5466e.jpg",
+    "static/media/discord.png": "/portfolio/static/media/discord.1081214961ef99b9e769.png",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d051ef565f0627fd6800cd851fb34d27.js": "/portfolio/precache-manifest.d051ef565f0627fd6800cd851fb34d27.js",
-    "service-worker.js": "/portfolio/service-worker.js",
-    "static/css/main.a0ec0123.chunk.css.map": "/portfolio/static/css/main.a0ec0123.chunk.css.map",
-    "static/js/2.f6b69fce.chunk.js.LICENSE.txt": "/portfolio/static/js/2.f6b69fce.chunk.js.LICENSE.txt",
-    "static/media/GabeNelsonResume_3-23-21.pdf": "/portfolio/static/media/GabeNelsonResume_3-23-21.3adefbd0.pdf",
-    "static/media/bca_group.jpg": "/portfolio/static/media/bca_group.9764ca0f.jpg",
-    "static/media/bike.jpg": "/portfolio/static/media/bike.19302495.jpg",
-    "static/media/bowl.png": "/portfolio/static/media/bowl.c4ba3d5c.png",
-    "static/media/brass.jpg": "/portfolio/static/media/brass.367440bd.jpg",
-    "static/media/colorchooser.png": "/portfolio/static/media/colorchooser.93958466.png",
-    "static/media/cups.jpg": "/portfolio/static/media/cups.0dc4b889.jpg",
-    "static/media/dihedral-calculator.png": "/portfolio/static/media/dihedral-calculator.632618f6.png",
-    "static/media/discord.png": "/portfolio/static/media/discord.3fd9545a.png",
-    "static/media/hw_image.png": "/portfolio/static/media/hw_image.dff71439.png",
-    "static/media/me.jpg": "/portfolio/static/media/me.49f0ad89.jpg",
-    "static/media/zombie-disease-game.png": "/portfolio/static/media/zombie-disease-game.ded3188f.png"
+    "main.b1f60937.css.map": "/portfolio/static/css/main.b1f60937.css.map",
+    "main.ed62098c.js.map": "/portfolio/static/js/main.ed62098c.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f4f2abbf.js",
-    "static/js/2.f6b69fce.chunk.js",
-    "static/css/main.a0ec0123.chunk.css",
-    "static/js/main.7676a5fb.chunk.js"
+    "static/css/main.b1f60937.css",
+    "static/js/main.ed62098c.js"
   ]
 }
