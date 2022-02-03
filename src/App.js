@@ -1,6 +1,6 @@
 import React from 'react';
 import me from './assets/me.jpg'
-import resume from './assets/GabeNelsonResume_3-23-21.pdf'
+import resume from './assets/GabeNelsonResume_2-2-22.pdf'
 import zombieImage from './assets/zombie-disease-game.png'
 import colorChooserImage from './assets/colorchooser.png'
 import dihedralImage from './assets/dihedral-calculator.png'
@@ -325,7 +325,7 @@ class App extends React.Component {
                             <div className="goal-box">
                                 <h2 style={textStyle}>Where</h2>
                                 <p style={paragraphStyle}>
-                                    I'm currently living with my family in <a style={linkStyle} 
+                                    I'm currently living in <a style={linkStyle} 
                                         href="https://www.google.com/maps/place/South+Burlington,+VT
                                         /@44.4677575,-73.2981026">South Burlington, Vermont</a>.
                                     I love the Burlington area and working here would be
@@ -341,10 +341,7 @@ class App extends React.Component {
                                     A lot of software companies nowadays use terms like <a style={linkStyle} href="https://agilemanifesto.org/">Agile</a> to describe
                                     their workplace environment, but not all workplaces
                                     that claim to follow these types of philosophies actually follow through. To me, it doesn't matter what you call it:
-                                    I'm for collaborative, adaptable, and functional development where teammates respect and support one another. This will
-                                    be essential to me especially as I start off, since I am partially a self-taught programmer and I am not aware of a lot
-                                    of conventions or best practice solutions to problems. While I am a fast learner and I'll pick these up quickly once I'm on the job, responsive
-                                    and helpful mentors will be a vital part of my learning.
+                                    I'm for collaborative, adaptable, and functional development where teammates respect and support one another.
                                 </p>
                             </div>
                             <div className="goal-box">
@@ -387,17 +384,19 @@ class App extends React.Component {
                                     href="https://www.bates.edu/mathematics/academics/academic-program/">Mathematics</a>, with a <a style={linkStyle}
                                     href="https://www.bates.edu/german-russian/academics/russian/academic-program/">Russian minor</a> and a <a style={linkStyle}
                                     href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=GEC#C084">Learning and Teaching</a> General
-                                    Education Concentration.
+                                    Education Concentration. Since the summer of 2020, I've been working at <a style={linkStyle}
+                                    href="https://public.vtinfo.com/">Vermont Information Processing</a> as a Support Specialist.
                                 </p>
                             </div>
                             <div className="about-box">
                                 <h2 style={textStyle}>Pottery</h2>
                                 <p style={paragraphStyle}>
-                                    Pottery is one of my favorite hobbies. I've done it on and off since I was young. Not only is it relaxing and fun to do,
-                                    it also allows me to express myself and share my final products with my family and friends. Pottery is a challenging and
-                                    highly rewarding craft and there's always more to learn. I have made pottery at <a style={linkStyle} 
-                                    href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, in college classes, and since the beginning
-                                    of 2021, at the <a href="https://middleburystudioschool.org/">Middlebury Studio School</a>.
+                                    Pottery is one of my favorite hobbies. I've worked with ceramics on and off since I was young. Not only is it relaxing and fun to do,
+                                    it also allows me to express myself and share my work with my family and friends. Pottery is a challenging and
+                                    highly rewarding craft and there's always more to learn. I have made pottery in college classes, at
+                                    the <a style={linkStyle} href="https://middleburystudioschool.org/">Middlebury Studio School</a>, 
+                                    and at <a style={linkStyle} href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, where 
+                                    I currently volunteer as a studio assistant.
                                 </p>
                                 <div className="image-box">
                                     <img src={bowlImage} alt="a bowl" style={imageStyle}></img>
@@ -419,9 +418,9 @@ class App extends React.Component {
                             <div className="about-box">
                                 <h2 style={textStyle}>Biking</h2>
                                 <p style={paragraphStyle}>
-                                    While I've always enjoyed biking, I've really started biking a lot more since I bought a used road bike in the summer of 2019. I
-                                    used it to commute to Burlington Code Academy from home. For me, it's a great way to get outside and enjoy our beautiful
-                                    community and get some exercise.
+                                    While I've always enjoyed biking, I started biking a lot more since I bought a used road bike in the summer of 2019. 
+                                    That summer, I used it to commute to the Burlington Code Academy and I still use it to commute to work. For me, it's a great way to 
+                                    get outside and enjoy our beautiful community as well as getting some exercise.
                                 </p>
                                 <div className="image-box">
                                     <img src={bikeImage} alt="my bike" style={imageStyle}></img>
@@ -484,16 +483,5 @@ function getColorThemes() {
         ]
     )
 }
-
-// { //hot theme
-//     textColor: {intRed: 255, intGreen: 0, intBlue: 0},
-//     highlightColor: {intRed: 255, intGreen: 0, intBlue: 121},
-//     linkColor: {intRed: 255, intGreen: 255, intBlue: 47},
-//     backgroundColor1: {intRed: 249, intGreen: 201, intBlue: 34},
-//     backgroundColor2: {intRed: 248, intGreen: 164, intBlue: 7}
-// }
-
-//html only version
-//make some guides/help for apps
 
 export default App;
