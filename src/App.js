@@ -124,7 +124,7 @@ class App extends React.Component {
         if (targetPage===1) targetPageHeight = this.state.pageOnePosition
         else if (targetPage===2) targetPageHeight = this.state.pageTwoPosition
         else if (targetPage===3) targetPageHeight = this.state.pageThreePosition
-        let startHeight = window.pageYOffset
+        let startHeight = window.scrollY
         let distance = targetPageHeight - startHeight
         let k = distance/900
         let x = 0
@@ -132,7 +132,7 @@ class App extends React.Component {
         let pageJumpInterval = setInterval(() => {
             x++
             distanceMoved += -k*Math.abs(x-30) + k*30
-            let distanceThisScroll = distanceMoved - window.pageYOffset
+            let distanceThisScroll = distanceMoved - window.scrollY
             window.scrollBy(0, distanceThisScroll)
             if (x>=60) {
                 clearInterval(pageJumpInterval)
@@ -141,7 +141,7 @@ class App extends React.Component {
     }
 
     handleScroll() {
-        let currentPosition = window.pageYOffset + window.innerHeight/2 //the middle of the viewport
+        let currentPosition = window.scrollY + window.innerHeight/2 //the middle of the viewport
         if (this.state.currentPage!==0 && currentPosition < this.state.pageOnePosition - 20) {
             this.setState({currentPage: 0})
         } else if (
@@ -198,7 +198,7 @@ class App extends React.Component {
                 <div id="page-0" className="page" style={evenPageStyle}>
                     <h1 style={textStyle}>Hi, I'm Gabe.</h1>
                     <img id="me-img" src={me} alt="me" style={imageStyle}></img>
-                    <h2 className="bb-text" style={textStyle}>I'm an aspiring developer.</h2>
+                    <h2 className="bb-text" style={textStyle}>I'm a software developer.</h2>
                     <div className="break-bar">
                         <div>
                             <h3 className="bb-text"><a href="https://github.com/nelsong1997" style={linkStyle}>Github</a></h3>
@@ -214,9 +214,9 @@ class App extends React.Component {
                     </div>
                     <hr style={ruleStyle}/>
                     <div className="break-bar">
-                        <h3 id="jump-1" className="bb-text" style={linkStyle} onClick={this.pageJump}>My Work ↓</h3>
+                        <h3 id="jump-1" className="bb-text" style={linkStyle} onClick={this.pageJump}>Featured Projects ↓</h3>
                         <h3 className="bb-spacer" style={textStyle}>|</h3>
-                        <h3 id="jump-2" className="bb-text" style={linkStyle} onClick={this.pageJump}>Career Aspirations ↓</h3>
+                        <h3 id="jump-2" className="bb-text" style={linkStyle} onClick={this.pageJump}>Career ↓</h3>
                         <h3 className="bb-spacer" style={textStyle}>|</h3>
                         <h3 id="jump-3" className="bb-text" style={linkStyle} onClick={this.pageJump}>More About Me ↓</h3>
                     </div>
@@ -235,7 +235,7 @@ class App extends React.Component {
                                     Professor <a style={linkStyle}
                                     href="https://www.bates.edu/faculty-expertise/profile/meredith-l-greer/">Meredith Greer</a> included
                                     this game as part of the curriculum of my capstone seminar 
-                                    <em> <a style={linkStyle} href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=MATH#495J">Advanced Topics in Biomathematics</a></em>.
+                                    <em> Advanced Topics in Biomathematics</em>.
                                     Playing by hand can be tedious and takes a while, so I decided as a personal project to turn the game into a web app that
                                     also automatically records data in both a graph and a table.
                                 </p>
@@ -267,8 +267,8 @@ class App extends React.Component {
                                     href="https://en.wikipedia.org/wiki/Group_theory">group theory</a>,
                                     which is a big part of <a style={linkStyle} href="https://en.wikipedia.org/wiki/Abstract_algebra">Abstract Algebra</a> in advanced Mathematics.
                                     As a part of this project I generalized some concepts to better fit into the app and allow for simpler calculations
-                                    for compositions of elements in dihedral groups. I was inspired to take this on as a personal project while taking <em><a
-                                    href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=MATH#379" style={linkStyle}>Abstract Algebra II</a></em> with professor <a
+                                    for compositions of elements in dihedral groups. I was inspired to take this on as a personal project while taking
+                                    <em> Abstract Algebra II</em> with professor <a
                                     href="https://www.bates.edu/faculty-expertise/profile/peter-n-wong/" style={linkStyle}>Peter Wong</a>.
                                 </p>
                                 <div className="image-box">
@@ -294,11 +294,13 @@ class App extends React.Component {
                     <div className="project-box">
                             <h2><a href={gymotheeLink} style={linkStyle}>Gymotheé</a></h2>
                             <p style={paragraphStyle}>
-                                Gymotheé is a <a href="https://discord.com" style={linkStyle}>discord</a> bot that has a few basic capabilities,
+                                Gymotheé is a <a href="https://discord.com" style={linkStyle}>Discord</a> bot that has a few basic capabilities,
                                 including coin flipping, dice rolling, and welcome messages.
-                                It also has a reminder system and one relatively unique feature: Voice Logging.
-                                Gymotheé can keep track of when people join, leave, and switch between the voice channels of your server.
-                                This lets you quickly solve common mysteries like "who just left the voice call?" or "who keeps joining and then leaving right away?"
+                                Its more complex features are a reminder system and a voice channel logging system.
+                                The reminder system allows you to create a reminder after a certain amount of time or at a specific time and date.
+                                Reminders can also be configured to repeat at regular intervals or on certain weekdays.
+                                When the reminder triggers, the bot will send you a customizable message.
+                                The voice channel logging system enables the bot to keep track of when people leave and join the voice channels of your server.
                             </p>
                             <div className="image-box">
                                 <a href={gymotheeLink}><img src={discordImage} alt="gabebot" style={imageStyle}></img></a>
