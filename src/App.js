@@ -1,16 +1,18 @@
 import React from 'react';
 import me from './assets/me.jpg'
 import resume from './assets/GabeNelsonResume_2-2-22.pdf'
-import zombieImage from './assets/zombie-disease-game.png'
-import colorChooserImage from './assets/colorchooser.png'
-import dihedralImage from './assets/dihedral-calculator.png'
+
 import discordImage from './assets/discord.png'
-import bowlImage from './assets/bowl.png'
-import cupsImage from './assets/cups.jpg'
+import groceryImage from './assets/grocery-list.png'
+import hopeImage from './assets/hw_image.png'
+import zombieImage from './assets/zombie-disease-game.png'
+
+import bowlsImage from './assets/bowls.jpg'
+import mugsImage from './assets/mugs.jpg'
 import bikeImage from './assets/bike.jpg'
 import brassImage from './assets/brass.jpg'
 import groupImage from './assets/bca_group.jpg'
-import hopeImage from './assets/hw_image.png'
+
 import './style.css'
 
 class App extends React.Component {
@@ -172,11 +174,10 @@ class App extends React.Component {
     }
 
     render() {
-        let dihedralLink = "https://nelsong1997.github.io/dihedral_calculator/"
-        let zombieLink = "https://nelsong1997.github.io/zombie_game/"
-        let colorLink = "https://nelsong1997.github.io/color_chooser/"
+        let groceryLink = "https://nelsong1997.github.io/grocery-list/"
+        let gymotheeLink = "https://github.com/nelsong1997/gymothee#commands"
         let hopeLink = "https://nelsong1997.github.io/hope-works-2/"
-        let gymotheeLink = "https://tinyurl.com/gymothee"
+        let zombieLink = "https://nelsong1997.github.io/zombie_game/"
 
         let currentColors = this.state.currentColors
         let textColorString = `rgb(${currentColors.textColor.intRed}, ${currentColors.textColor.intGreen}, ${currentColors.textColor.intBlue})`
@@ -224,9 +225,38 @@ class App extends React.Component {
                 <div id="page-1" className="page" style={oddPageStyle} ref={this.pageOne}>
                     <h1 style={textStyle}>Featured Projects</h1>
                     <label style={{color: textColorString, maxWidth: "90vw"}}>
-                        Click on an image to open the project! (Note: most of these apps are not mobile accessible)
+                        Click on an image or heading to open a project! (Note: most of these apps are not mobile accessible)
                     </label>
                     <div id="project-boxes">
+                        <div className="inner-col">
+                            <div className="project-box">
+                                <h2><a href={groceryLink} style={linkStyle}>Grocery List</a></h2>
+                                <p style={paragraphStyle}>
+                                    I wanted a grocery list app that was fine tuned to my own personal needs, so I made one.
+                                    This app is designed to work on a phone web browser. You can add items to different categories and then add them to your list.
+                                    As you create new items, you can configure them to be quantified or standalone. Local storage is used to save your configuration,
+                                    but the app also has import and export functionality.
+                                </p>
+                                <div className="image-box">
+                                    <a href={groceryLink}><img src={groceryImage} alt="grocery list" style={imageStyle}></img></a>
+                                </div>
+                            </div>
+                            <div className="project-box">
+                                <h2><a href={gymotheeLink} style={linkStyle}>Gymotheé</a></h2>
+                                <p style={paragraphStyle}>
+                                    Gymotheé is a <a href="https://discord.com" style={linkStyle}>Discord</a> bot that has a few basic capabilities,
+                                    including coin flipping, dice rolling, and welcome messages.
+                                    Its more complex features include a reminder system and a voice channel logging system.
+                                    The reminder system allows you to create a reminder that triggers after a certain amount of time or at a specific time and date.
+                                    Reminders can also be configured to repeat at regular intervals or on certain weekdays.
+                                    When a reminder triggers, the bot sends you a customizable message.
+                                    The voice channel logging system enables the bot to keep track of when people leave and join the voice channels of your server.
+                                </p>
+                                <div className="image-box">
+                                    <a href={gymotheeLink}><img src={discordImage} alt="gabebot" style={imageStyle}></img></a>
+                                </div>
+                            </div>
+                        </div>
                         <div className="inner-col">
                             <div className="project-box">
                                 <h2><a href={zombieLink} style={linkStyle}>Zombie Game</a></h2>
@@ -238,48 +268,17 @@ class App extends React.Component {
                                     <em> Advanced Topics in Biomathematics</em>.
                                     Playing by hand can be tedious and takes a while, so I decided as a personal project to turn the game into a web app that
                                     also automatically records data in both a graph and a table.
+                                    This app was published on <a href="https://digitalcommons.usu.edu/lemb/8/" style={linkStyle}>Utah State University's website</a>!
                                 </p>
                                 <div className="image-box">
                                     <a href={zombieLink}><img src={zombieImage} alt="zombie game" style={imageStyle}></img></a>
                                 </div>
                             </div>
                             <div className="project-box">
-                                <h2><a href={colorLink} style={linkStyle}>Color Chooser</a></h2>
-                                <p style={paragraphStyle}>
-                                    The Color Chooser is essentially a highly customizable die. It allows the user to have the app randomly 
-                                    select a color from a personalized list, with different constraints and options, including weighting and 
-                                    pseudo-randomness. Unlike other apps I've created, this app was designed with aesthetics and mobile access in mind.
-                                </p>
-                                <p style={paragraphStyle}>
-                                    To use, click or touch the screen to start choosing a random color. To reset, click/touch and hold. While on
-                                    the start screen, click/touch and hold to open the options menu (click the "x" to exit).
-                                </p>
-                                <div className="image-box">
-                                    <a href={colorLink} style={linkStyle}><img src={colorChooserImage} alt="color chooser" style={imageStyle}></img></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="inner-col">
-                            <div className="project-box">
-                                <h2><a href={dihedralLink} style={linkStyle}>Dihedral Calculator</a></h2>
-                                <p style={paragraphStyle}>
-                                    <a style={linkStyle} href="https://en.wikipedia.org/wiki/Dihedral_group">Dihedral groups</a> are part of <a style={linkStyle}
-                                    href="https://en.wikipedia.org/wiki/Group_theory">group theory</a>,
-                                    which is a big part of <a style={linkStyle} href="https://en.wikipedia.org/wiki/Abstract_algebra">Abstract Algebra</a> in advanced Mathematics.
-                                    As a part of this project I generalized some concepts to better fit into the app and allow for simpler calculations
-                                    for compositions of elements in dihedral groups. I was inspired to take this on as a personal project while taking
-                                    <em> Abstract Algebra II</em> with professor <a
-                                    href="https://www.bates.edu/faculty-expertise/profile/peter-n-wong/" style={linkStyle}>Peter Wong</a>.
-                                </p>
-                                <div className="image-box">
-                                    <a href={dihedralLink}><img src={dihedralImage} alt="dihedral calculator" style={imageStyle}></img></a>
-                                </div>
-                            </div>
-                            <div className="project-box">
                                 <h2><a href={hopeLink} style={linkStyle}>HOPE Works Capstone</a></h2>
                                 <p style={paragraphStyle}>
                                     At the end of my time at the <a href="https://www.burlingtoncodeacademy.com/" style={linkStyle}>Burlington Code Academy</a>, 
-                                    my group's capstone project was to build a web app for <a href="https://hopeworksvt.org/" style={linkStyle}>Hope Works</a>, a non-profit
+                                    my group's capstone project was to build a web app for <a href="https://hopeworksvt.org/" style={linkStyle}>HOPE Works</a>, a non-profit
                                     in Burlington that helps survivors of
                                     sexual and domestic violence. My two main focuses for this project were the form that volunteers and employees fill out
                                     to document interactions with survivors and the page that sorts and displays submitted forms. Note that this is a
@@ -291,37 +290,20 @@ class App extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className="project-box">
-                            <h2><a href={gymotheeLink} style={linkStyle}>Gymotheé</a></h2>
-                            <p style={paragraphStyle}>
-                                Gymotheé is a <a href="https://discord.com" style={linkStyle}>Discord</a> bot that has a few basic capabilities,
-                                including coin flipping, dice rolling, and welcome messages.
-                                Its more complex features are a reminder system and a voice channel logging system.
-                                The reminder system allows you to create a reminder after a certain amount of time or at a specific time and date.
-                                Reminders can also be configured to repeat at regular intervals or on certain weekdays.
-                                When the reminder triggers, the bot will send you a customizable message.
-                                The voice channel logging system enables the bot to keep track of when people leave and join the voice channels of your server.
-                            </p>
-                            <div className="image-box">
-                                <a href={gymotheeLink}><img src={discordImage} alt="gabebot" style={imageStyle}></img></a>
-                            </div>
-                        </div>
                     <h3 id="jump-0" className="bb-text" style={linkStyle} onClick={this.pageJump}>Back to Top ↑</h3>
                 </div>
                 <div id="page-2" className="page" style={evenPageStyle} ref={this.pageTwo}>
-                    <h1 style={textStyle}>Work Goals</h1>
-                    <label style={paragraphStyle}>What kind of job am I looking for?</label>
+                    <h1 style={textStyle}>Career</h1>
+                    <label style={paragraphStyle}>What kind of work do I want to do?</label>
                     <div id="goal-boxes">
                         <div className="inner-col">
                             <div className="goal-box">
                                 <h2 style={textStyle}>What</h2>
                                 <p style={paragraphStyle}>
-                                    The softwares I'm interested in creating are basically tools, even if they are just small parts of much bigger applications. 
+                                    The pieces of software I'm interested in creating are basically tools, even if they are just small parts of much bigger applications. 
                                     They are used to make some task simpler, faster, or less
-                                    frustrating. No matter what I end up doing, I want to be helping people in some way. While I would ideally love to work
-                                    on projects that help people in difficult life situations or that help make our society more equitable, I would settle 
-                                    for making people's day to day lives easier by making the apps they use every day more effective and easier to use. That
-                                    being said, I am not interested in working for any company that is exploitative, deceptive, or predatory in any way.
+                                    frustrating. No matter what I'm doing, I want to be helping people in some way 
+                                    by making the apps they use every day more effective and easier to use.
                                 </p>
                             </div>
                             <div className="goal-box">
@@ -330,9 +312,9 @@ class App extends React.Component {
                                     I'm currently living in <a style={linkStyle} 
                                         href="https://www.google.com/maps/place/South+Burlington,+VT
                                         /@44.4677575,-73.2981026">South Burlington, Vermont</a>.
-                                    I love the Burlington area and working here would be
-                                    great, but I am also excited by the idea of moving away and starting my own adventure in a new place.
-                                    I am open to different possibilities about where I'll work!
+                                    I love the Burlington area and working here is great,
+                                    but I am always open to moving away and starting my own adventure in a new place.
+                                    I am open to different possibilities about where I might work in the future!
                                 </p>
                             </div>
                         </div>
@@ -340,18 +322,18 @@ class App extends React.Component {
                             <div className="goal-box">
                                 <h2 style={textStyle}>How</h2>
                                 <p style={paragraphStyle}>
-                                    A lot of software companies nowadays use terms like <a style={linkStyle} href="https://agilemanifesto.org/">Agile</a> to describe
-                                    their workplace environment, but not all workplaces
-                                    that claim to follow these types of philosophies actually follow through. To me, it doesn't matter what you call it:
-                                    I'm for collaborative, adaptable, and functional development where teammates respect and support one another.
+                                    I currently work within an <a style={linkStyle} href="https://agilemanifesto.org/">Agile</a> framework, which has
+                                    helped guide my understanding of how software can be developed and maintained in a way that is both efficient
+                                    and beneficial to customers. This process has taught me how to work together to break tasks down into their smallest
+                                    possible size, assess their value, and get them done. Regardless of framework, the important things to me are
+                                    collaboration, adaptability, and functional development where teammates respect and support one another.
                                 </p>
                             </div>
                             <div className="goal-box">
                                 <h2 style={textStyle}>Why</h2>
                                 <p style={paragraphStyle}>
-                                    I fell in love with math during first semester of college. My <em>
-                                    <a style={linkStyle} href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=MATH#MATH106">Calculus II</a></em> professor <a
-                                    href="https://web.archive.org/web/20190702112805/https://www.bates.edu/faculty-expertise/profile/henry-a-boateng/" style={linkStyle}>
+                                    I fell in love with math during first semester of college. My <em>Calculus II</em> professor <a
+                                    href="https://haboateng.github.io/" style={linkStyle}>
                                     Henry Boateng</a> had an eccentric personality, a wonderful sense of humor, and an infectious laugh, but his homework
                                     problems were often quite challenging! In order to solve them, I had to work with newly made friends in groups
                                     for hours on end. While it was difficult, it was also immensely rewarding to work together to tackle tricky problems. 
@@ -383,62 +365,53 @@ class App extends React.Component {
                                     href="https://www.sbschools.net/Domain/8">South Burlington High School</a> and later attended <a style={linkStyle}
                                     href="https://www.bates.edu/">Bates College</a>,
                                     where in May, 2020 I graduated with a Bachelors degree in <a style={linkStyle}
-                                    href="https://www.bates.edu/mathematics/academics/academic-program/">Mathematics</a>, with a <a style={linkStyle}
-                                    href="https://www.bates.edu/german-russian/academics/russian/academic-program/">Russian minor</a> and a <a style={linkStyle}
-                                    href="https://www.bates.edu/catalog/?s=current&a=renderDept&d=GEC#C084">Learning and Teaching</a> General
-                                    Education Concentration. Since the summer of 2020, I've been working at <a style={linkStyle}
+                                    href="https://www.bates.edu/mathematics/academics/academic-program/">Mathematics</a> with a <a style={linkStyle}
+                                    href="https://www.bates.edu/german-russian/academics/russian/academic-program/">minor in Russian</a>.
+                                    In the summer of 2020, I moved back to South Burlington and started working at <a style={linkStyle}
                                     href="https://public.vtinfo.com/">Vermont Information Processing</a> as a Support Specialist.
+                                    In April 2022, I transitioned to a Software Engineer role at VIP.
                                 </p>
                             </div>
                             <div className="about-box">
                                 <h2 style={textStyle}>Pottery</h2>
                                 <p style={paragraphStyle}>
-                                    Pottery is one of my favorite hobbies. I've worked with ceramics on and off since I was young. Not only is it relaxing and fun to do,
-                                    it also allows me to express myself and share my work with my family and friends. Pottery is a challenging and
+                                    Pottery is one of my favorite hobbies. I've worked with ceramics on and off since I was young.
+                                    Not only is it a lot of fun, it also allows me to share a community with other potters,
+                                    express myself, and gift my work to family and friends. Pottery is a challenging and
                                     highly rewarding craft and there's always more to learn. I have made pottery in college classes, at
                                     the <a style={linkStyle} href="https://middleburystudioschool.org/">Middlebury Studio School</a>, 
                                     and at <a style={linkStyle} href="https://www.burlingtoncityarts.org/">Burlington City Arts</a>, where 
                                     I currently volunteer as a studio assistant.
                                 </p>
                                 <div className="image-box">
-                                    <img src={bowlImage} alt="a bowl" style={imageStyle}></img>
-                                    <img src={cupsImage} alt="some cups" style={imageStyle}></img>
+                                    <img src={bowlsImage} alt="bowls" style={imageStyle}></img>
+                                    <img src={mugsImage} alt="mugs" style={imageStyle}></img>
                                 </div>
-                                <label style={paragraphStyle}>Some of my work</label>
-                            </div>
-                            <div className="about-box">
-                                <h2 style={textStyle}>Video Games</h2>
-                                <p style={paragraphStyle}>
-                                    I've always enjoyed playing video games. I am particularly interested in competitive
-                                    multiplayer games that combine skill and execution with strategy and planning. They're also just a really fun way to spend time with 
-                                    friends. My favorite game right now is <a style={linkStyle}
-                                    href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee">Super Smash Bros. Melee</a>.
-                                </p>
+                                <label style={paragraphStyle}>
+                                    See more of my work on <a style={linkStyle} href="https://www.instagram.com/gjn_pottery/">Instagram</a>
+                                </label>
                             </div>
                         </div>
                         <div className="inner-col">
                             <div className="about-box">
                                 <h2 style={textStyle}>Biking</h2>
                                 <p style={paragraphStyle}>
-                                    While I've always enjoyed biking, I started biking a lot more since I bought a used road bike in the summer of 2019. 
-                                    That summer, I used it to commute to the Burlington Code Academy and I still use it to commute to work. For me, it's a great way to 
-                                    get outside and enjoy our beautiful community as well as getting some exercise.
+                                    While I've always enjoyed biking, I started biking a lot more since I bought a used road bike in the summer of 2019 
+                                    to commute to Burlington Code Academy. Now, I have two bikes and I bike all year round for both fun and function.
+                                    For me, it's a great way to get outside, enjoy our beautiful community, and get some exercise.
                                 </p>
                                 <div className="image-box">
                                     <img src={bikeImage} alt="my bike" style={imageStyle}></img>
                                 </div>
                             </div>
                             <div className="about-box">
-                                <h2 style={textStyle}>Music</h2>
+                                <h2 style={textStyle}>Video Games</h2>
                                 <p style={paragraphStyle}>
-                                    I love both playing and listening to music. I've been playing music since 2nd grade, and I have played the piano, recorder,
-                                    clarinet, and euphonium. In college I played in the <a style={linkStyle}
-                                    href="https://www.bates.edu/music/the-brass-ensemble/">Bates Brass Ensemble</a> (pictured below). Most of my enjoyment comes 
-                                    from playing as part of a group, which I haven't gotten to do since I left my college campus in March of 2020.
+                                    I've always enjoyed playing video games. For me, they simply are a great way to spend time with others.
+                                    I also love grappling with games that challenge me to develop various skills and strategies in order to win.
+                                    My favorite game right now is <a style={linkStyle}
+                                    href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Melee">Super Smash Bros. Melee</a>.
                                 </p>
-                                <div className="image-box">
-                                    <img src={brassImage} alt="Bates Brass Ensemble" style={imageStyle}></img>
-                                </div>
                             </div>
                         </div>
                     </div>

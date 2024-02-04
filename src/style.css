@@ -40,10 +40,17 @@ a {
     text-decoration: none;
 }
 
+.image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .image-box > a > img, .image-box > img {
     max-height: 198px;
     margin-left: 5px;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
 #project-boxes, #goal-boxes, #about-boxes {
