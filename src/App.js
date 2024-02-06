@@ -1,6 +1,6 @@
 import React from 'react';
 import me from './assets/me.jpg'
-import resume from './assets/GabeNelsonResume_2-2-22.pdf'
+import resume from './assets/GabeNelsonResume_2-4-24.pdf'
 
 import discordImage from './assets/discord.png'
 import groceryImage from './assets/grocery-list.png'
