@@ -1,6 +1,6 @@
 import React from 'react';
 import me from './assets/me.jpg'
-import resume from './assets/GabeNelsonResume_2-4-24.pdf'
+import resume from './assets/Gabe_Nelson_Resume_2-4-24.pdf'
 
 import discordImage from './assets/discord.png'
 import groceryImage from './assets/grocery-list.png'
@@ -10,7 +10,6 @@ import zombieImage from './assets/zombie-disease-game.png'
 import bowlsImage from './assets/bowls.jpg'
 import mugsImage from './assets/mugs.jpg'
 import bikeImage from './assets/bike.jpg'
-import brassImage from './assets/brass.jpg'
 import groupImage from './assets/bca_group.jpg'
 
 import './style.css'
@@ -322,7 +321,7 @@ class App extends React.Component {
                             <div className="goal-box">
                                 <h2 style={textStyle}>How</h2>
                                 <p style={paragraphStyle}>
-                                    I currently work within an <a style={linkStyle} href="https://agilemanifesto.org/">Agile</a> framework, which has
+                                    I currently work within <a style={linkStyle} href="https://agilemanifesto.org/">Agile</a> and Scrum frameworks, which has
                                     helped guide my understanding of how software can be developed and maintained in a way that is both efficient
                                     and beneficial to customers. This process has taught me how to work together to break tasks down into their smallest
                                     possible size, assess their value, and get them done. Regardless of framework, the important things to me are
